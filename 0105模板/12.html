@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>majorproject</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<!--广告图-->
+<table align="center" border="0" width="660px" height="200px" cellpadding="0" cellspacing="0" style="width: 660px;height: 200px;border-collapse: collapse;">
+    <tr><td align="center" style="padding: 0;">
+        <a href="https://xyk.bankofbeijing.com.cn/a/Qq9"><img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/17.jpg" alt="广告" style="width:650px;height: 200px;"></a>
+    </td></tr>
+</table>
+<!--广告图-->
+
+<!--开头二维码-->
+<table border="0" align="center" cellpadding="0" cellspacing="0" width="660px" height="100px" style="width: 660px;height: 100px;border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <td align="center" width="110px" style="width:110px;">
+            <img src="http://123.121.159.190:9080/img/qrcode.jpg" alt="二维码" style="width:100px;"></td>
+        <td align="left" width="450px" nowrap="noWrap" style="width: 450px;"><span
+                style="font-size:20px;font-weight:bold;">登录"掌上京彩"APP自助办理分期!</span><br>
+            <span noWrap="noWrap" style="font-size:18px;">扫码下载"掌上京彩"APP,首页点击"账单分期",即刻办理</span>
+        </td>
+        <td align="center" width="100px" style="width:100px;">
+            <a href="https://xyk.bankofbeijing.com.cn/a/GE5">
+                <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/conductButton-01.png" alt="立即办理" style="width: 100px;">
+            </a></td></tr>
+    </td>
+    </tr>
+    </tbody>
+</table>
+<!--开头二维码-->
+
+<!--上半部分-->
+<table width="660px" height="350px" border="0" align="center" cellpadding="0" cellspacing="0" background="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/back3_01.png" style="width: 660px;height: 350px;border-collapse: collapse; background-repeat: no-repeat;background-position: top;background-size:660px 100%;">
+    <tr>
+        <td width="660px" height="60px" style="width: 660px;height: 60px;"></td>
+    </tr>
+    <tr>
+        <td align="center" width="660px" height="50px" style="width: 660px;height: 50px;padding: 0;">
+            <table align="center" border="0" width="600px" height="50px" style="width: 600px;height: 50px;border-collapse: collapse;">
+                <tr>
+                    <td width="20px" height="50px" style="width: 20px;height: 50px;"></td>
+                    <td width="300px" height="50px" style="width: 300px;height: 50px;">
+                        <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/06-01.png" style="width: 280px;height: 50px;" alt="logo"/>
+                    </td>
+                    <td width="280px" height="50px" style="width: 280px;height: 50px;"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" width="660px" height="190px" style="width: 660px;height: 190px;padding: 0;">
+            <table align="center" border="0" width="600px" height="190px" style="width: 600px;height: 190px;border-collapse: collapse;">
+                <tr>
+                    <td align="center" width="300px" height="190px" style="width: 300px;height: 190px;padding: 0;line-height: 30px;">
+                        <span style="font-size: 35px; font-weight:700;">信用卡对账单</span>
+                        <br>
+                        <span style="font-size: 12px; font-weight: 500;">BANK OF BEIJING CARD STATEMENT</span>
+                    </td>
+                    <td weight="300px"  height="190px" style="width: 300px;height: 190px;padding: 0;">
+                        <table align="center" style="width: 260px;height: 150px; border: #999 2px solid;border-radius: 25px;;" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="260px" height="130px" style="padding:10px 0 5px 15px;width: 260px;height: 130px;text-align: left;">
+                                    <strong>
+                                        <span style="font-size: 16px;">账户信息提示 </span>
+                                    </strong><br>
+                                    <span style="line-height: 20px;font-size: 14px;">本期账单日:<span style="color: rgb(39, 134, 228);text-decoration: underline;"> ${zdr} <br></span></span>
+                                    <span style="line-height: 20px;font-size: 14px;">本期到期还款日:<span style="color: rgb(39, 134, 228);text-decoration: underline;"> ${hkr} <br></span></span>
+                                    <span style="line-height: 20px;font-size: 14px;">信用额度:人民币额度${xyed}元 <br></span>
+                                    <span style="line-height: 20px;font-size: 14px;">预借现金额度:人民币额度${yjxjed}元</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="660px" height="50px" style="width: 660px;height: 50px;">
+        </td>
+    </tr>
+</table>
+<!--上半部分-->
+
+<!--中间固定部分1-->
+<#list accountTypeList as accountType>
+<#if accountType.zhlx?has_content && accountType.zhlx != "">
+<table border="0" align="center" width="660px" height="300px" cellpadding="0" cellspacing="0" background="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/back3_02.png" style="width: 660px;height: 270px; background-repeat: no-repeat;background-position: top;background-size:660px 100%;border-collapse: collapse;">
+    <#if accountType_index == 0>
+    <tr>
+        <td align="center" width="600px" height="65px" style="width: 600px;height: 65px;padding: 0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600px" height="65px" style="width: 600px;height: 65px;">
+                <tr><td width="600px" height="65px" style="width: 600px;height: 65px; padding-left: 20px;">
+                    <span style="font-size: 15px;">尊敬的${zhxm}<br></span>
+                    <span width="500px" noWrap="word-break" style="font-size: 12px;width:500px;">请您点击阅读<a href="https://ams-xyk-XT.bankofbeijing.com.cn/agreementDisplay?id=ATP001-STD00017">《北京银行信用卡章程》(“章程”)</a>、<a href="https://ams-xyk-XT.bankofbeijing.com.cn/agreementDisplay?id=TMP00008">《北京银行信用卡领用合约》(“合约”)</a>，以确保充分知悉和理解章程及合约内容。</span>
+                </td></tr></table>
+        </td>
+    </tr>
+</#if>
+<#if accountType.zhlx == "03">
+<tr>
+    <td align="center" width="600px" height="20px" style="width:600px;height: 20px;">
+        <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/rmbAccount-01.png" alt="" style="width:600px;height: 20px;">
+    </td>
+</tr>
+<#else>
+<tr>
+    <td align="center" width="600px" height="20px" style="width:600px;height: 20px;">
+        <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/redTitleBackground-01.png" alt="" style="width:600px;height: 20px;">
+    </td>
+</tr>
+</#if>
+<tr>
+    <td align="center" width="600px" height="60px" style="width: 600px;height: 60px;padding: 0;">
+        <table border="0" cellpadding="0" cellspacing="0" width="600px" height="60px" style="width: 600px;height:60px;border-collapse: collapse;">
+            <tbody>
+            <tr>
+                <td align="center" width="300px" height="60px" style="width: 300px;height: 60px;padding: 0;">
+                    <table border="0" cellspacing="0" cellpadding="0" width="300px" height="60px" style="width: 300px;height: 60px;">
+                        <tbody>
+                        <tr>
+                            <td align="center" width="200px" height="30px" style="width: 200px;height: 30px;font-size: 15px;">本期应还款金额：
+                                <span style="font-size: 15px;"><br>Current Balance：</span></td>
+                            <#if accountType.zhlx == "03">
+                            <td rowspan="2" align="center" width="100px" style="width: 100px;">
+                                <span style="font-size: 15px;">${accountType.bqyhje}</span><span style="font-size: 15px;">元</span>
+                            </td>
+                            <#else>
+                            <td rowspan="2" align="center" width="100px" style="width: 100px;">
+                                <span style="font-size: 15px;">${accountType.bqyhje}</span><span style="font-size: 15px;">美元</span>
+                            </td>
+                            </#if>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center" width="300px" height="60px" style="width: 300px;height: 60px;padding: 0;">
+                    <table border="0" cellspacing="0" cellpadding="0" width="300px" height="60px" style="width: 300px;height: 60px;">
+                        <tbody>
+                        <tr>
+                            <td align="center" width="200px" height="30px" style="width: 200px;height: 30px;;font-size: 15px;">最低还款金额：
+                                <span style="font-size: 15px;"><br>Minimum Payment：</span></td>
+                            <#if accountType.zhlx == "03">
+                            <td rowspan="2" align="center" width="100px" style="width: 100px;">
+                                <span style="font-size: 15px;">${accountType.bqzdhkje}</span><span style="font-size: 15px;">元</span>
+                            </td>
+                            <#else>
+                            <td rowspan="2" align="center" width="100px" style="width: 100px;">
+                                <span style="font-size: 15px;">${accountType.bqzdhkje}</span><span style="font-size: 15px;">美元</span>
+                            </td>
+                            </#if>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td align="center" width="600px" height="100px" style="width: 600px;height:100px;padding: 0;">
+        <table width="600px" heigtht="100px" align="center" border="0" cellspacing="0" cellpadding="0" style="width: 600px;height:100px;border-collapse: collapse;">
+            <tbody>
+            <tr>
+                <td width="112px" align="center" valign="top" nowrap="noWrap" >
+                    <span style="font-size: 14px;">本期应还款金额<br></span>
+                <td width="2px" align="center" valign="top">=</td>
+                <td width="140px" align="center" valign="top" nowrap="noWrap">
+                    <span style="font-size: 14px;">上期账单金额<br></span>
+
+                </td>
+                <td width="2px" align="center" valign="top">-</td>
+                <td width="92px" align="center" valign="top" nowrap="noWrap">
+                    <span style="font-size: 14px;">上期还款金额<br></span>
+                </td>
+                <td width="2px" align="center" valign="top">+</td>
+                <td width="92px" align="center" valign="top" nowrap="noWrap">
+                    <span style="font-size: 14px;">本期账单金额<br></span>
+                </td>
+                <td width="2px" align="center" valign="top">+</td>
+                <td width="92px" align="center" valign="top" nowrap="noWrap">
+                    <span style="font-size: 14px;">本期调整金额<br></span>
+                </td>
+                <td width="2px" align="center" valign="top">+</td>
+                <td width="62px" align="center" valign="top" nowrap="noWrap">
+                    <span style="font-size: 14px;">循环利息<br></span>                              </td>
+            </tr>
+            <tr>
+                <td width="112px" align="center" valign="top" nowrap="noWrap" >
+                    <span style="font-size: 13px;">Current Balance<br></span>
+                <td align="center"> </td>
+                <td width="140px" align="center" valign="top" >
+                    <span style="font-size: 13px;">Previous Account Balance<br></span>
+                </td>
+                <td align="center"> </td>
+                <td width="92px" align="center" valign="top" >
+                    <span style="font-size: 13px;">Payment<br></span>
+                </td>
+                <td align="center"> </td>
+                <td width="92px" align="center" valign="top" >
+                    <span style="font-size: 13px;">New Charge<br></span>
+                </td>
+                <td align="center"> </td>
+                <td width="92px" align="center" valign="top" >
+                    <span style="font-size: 13px;">Adjustment<br></span>
+                </td>
+                <td align="center"> </td>
+                <td width="62px" align="center" valign="top" >
+                    <span style="font-size: 13px;">Interest<br></span>                                </td>
+            </tr>
+            <tr>
+                <td align="center" style="font-size: 14px;">${accountType.bqyhje}</td>
+                <td width="2px" align="center" valign="top"></td>
+                <td align="center" style="font-size: 14px;">${accountType.sqzdje}</td>
+                <td width="2px" align="center" valign="top"></td>
+
+                <td align="center" style="font-size: 14px;">${accountType.sqhkje}</td>
+                <td width="2px" align="center" valign="top"></td>
+
+                <td align="center" style="font-size: 14px;">${accountType.bqzdje}</td>
+                <td width="2px" align="center" valign="top"></td>
+
+                <td align="center" style="font-size: 14px;">${accountType.bqtzje}</td>
+                <td width="2px" align="center" valign="top"></td>
+
+                <td align="center" style="font-size: 14px;">${accountType.xhlx}</td>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td width="660px" height="5px" style="width: 660px; height:5px"></td>
+</tr>
+<tr>
+    <td align="center" width="600px" height="50px" style="width: 600px;height: 50px;padding: 0;">
+        <table width="600px" height="50px" align="center"  border="0" cellspacing="0" cellpadding="0" style="width: 600px;height: 50px;border-collapse: collapse;" >
+            <tbody>
+            <tr height="50px">
+                <td  width="16%;" style="padding-top: 10px; border-top: #e30012 2px solid;border-bottom: #e30012 2px solid;border-left: #e30012 2px solid;font-size: 14px;" align="center" valign="center">
+                    交易日
+                    <span><br>Trans. Date</span>
+                </td>
+                <td  width="16%" style="font-size: 14px;padding-top: 10px; border-top: #e30012 2px solid;border-bottom: #e30012 2px solid;" align="center" valign="center" >
+                    记账日
+                    <span><br>Post Date</span>
+                </td>
+                <td  width="26%" style="font-size: 14px;padding-top: 10px; border-top: #e30012 2px solid;border-bottom: #e30012 2px solid;" align="center" valign="center" >
+                    交易摘要
+                    <span><br>Description</span>
+                </td>
+                <td   width="17%" style="font-size: 14px;padding-top: 10px; border-top: #e30012 2px solid;border-bottom: #e30012 2px solid;" align="center" valign="center" >
+                    交易金额
+                    <span><br>Trans.Amount</span>
+                </td>
+                <td style="padding-right: 10px;font-size: 14px;padding-top: 10px; padding-right: 10px; border-top: #e30012 2px solid;border-bottom: #e30012 2px solid;border-right: #e30012 2px solid;"  width="25%" align="center" valign="center" >
+                    卡号末四位
+                    <span><br>Card Number Last 4 Digits.</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+</table>
+<!--中间固定部分1-->
+<!--消费数据，添加数据直接复制整个table-->
+<#list accountType.transactionList as transaction>
+<#if transaction.jyr?has_content && transaction.jyr != "">
+<table align="center" width="660px" height="50px" border="0" cellpadding="0" cellspacing="0" background="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/back3_06.png" style="width: 660px;height: 50px;border-collapse: collapse; background-position: top;background-size: 660px 50px;background-repeat: no-repeat;">
+    <tr height="50px">
+        <td align="center" width="600px" height="50px" style="width: 600px;height: 50px;padding: 0;">
+            <table align="center" width="600px" height="50px" cellpadding="0" cellspacing="0" style="width: 600px;height: 50px;border-collapse: collapse;">
+                <td align="center" style="width: 16%;"><span style="color:cornflowerblue;text-decoration: underline;font-size: 14px;" t="5"times="">${transaction.jyr}</span></td>
+                <td align="center" style="width: 16%;"><span style="color:cornflowerblue;text-decoration: underline;font-size: 14px;"times="">${transaction.jzr}</span></td>
+                <td align="center" style="width: 26%;word-break: normal;"><span style="font-size: 14px;">${transaction.jyzy}</span></td>
+                <td align="center" style="width: 17%;">
+                    <#if accountType.zhlx == "03">
+                    <span style="font-size: 14px;">RMB:${transaction.jyje}</span>
+                    <#else>
+                    <span style="font-size: 14px;">USD:${transaction.jyje}</span>
+                </#if>
+                </td>
+                <td align="center" style="width: 25%;"><span style="font-size: 14px;">${transaction.khmsw}</span></td>
+            </table>
+        </td>
+    </tr>
+</table>
+</#if>
+</#list>
+</#if>
+</#list>
+<!--消费数据，添加数据直接复制整个table-->
+<!--后半部分1-->
+<table width="660px" height="350px" border="0" align="center" cellpadding="0" cellspacing="0" background="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/back3_03.png" style="width: 660px;height: 350px;border-collapse: collapse; background-repeat: no-repeat;background-position: top;background-size:660px 100%;">
+    <tr>
+        <td width="660px" height="50px" style="width:660px;height: 50px;"></td>
+    </tr>
+    <tr>
+        <td align="center">
+            <table width="600px" height="200px" border="0" align="center" cellpadding="0" cellspacing="0" style="width: 600px;height: 200px;">
+                <tbody>
+                <tr>
+                    <!-- <table border="black 1px solid"> -->
+                    <td width="50px" height="200px" width="50px" height="200px"></td>
+                    <td width="30px" height="200px" align="center" style="border: #e30012 2px solid;font-size: 14px;" >
+                        <b>
+                                            <span ><br>
+                                                账<br>
+                                                单<br>
+                                                说<br>
+                                                明<br>
+                                            </span>
+                        </b>
+                    </td>
+                    <!-- </table> -->
+                    <td width="600px" height="200px" style="width: 600px;height: 200px; padding-left: 20px;text-align: left;">
+                                    <span style="font-size: 12px;line-height: 20px;">
+                                        *金额符号说明:+号表示支出，-号表示还款。
+                                    </span><br>
+                        <span style="font-size: 12px;line-height: 20px;">
+                                        *刷卡交易并非实时到账，因此本账单未必已含您当期的所有刷卡交易明细，个别刷卡交易明细可能在下期账单中列示，请注意核对。<br>
+                                    </span>
+                        <span style="font-size: 12px;line-height: 20px;">
+                                        *上述摘要仅供参考，如与实际签单不符或有任何疑问，请在账单日后的30天内咨询我行客服中心，服务热线4006-601169。<br>
+                                    </span>
+                        <span style="font-size: 12px;line-height: 20px;">
+                                        *若您的人民币或者美元账户的"本期应还款金额"为负数，表示本期该人民币或者美元账户尚有存款，您不需另行还款。<br>
+                                    </span>
+                        <span style="font-size: 12px;line-height: 20px;">
+                                        *我行按约向您收取信用卡、分期业务利息和费用，息费收取规则详见北京银行信用卡中心官网，如您对收费标准有异议，有权向我行申请注销卡片，但您已经与我行形成的债权债务关系不因此消灭或改变。<br>
+                                    </span>
+                        <span style="font-size: 12px;line-height: 20px;">
+                                        *信用卡领用合约、章程及收费标准的部分条款发生变化时，将通过信用卡官网<a
+                                href="https://www.bankofbeijing.com.cn/creditcard/secondlist?column=1557569367380729856"
+                                style="color: rgb(39, 134, 228);text-decoration: underline;"
+                        >最新公告</a>进行公示。
+                                    </span>
+                    </td>
+                    <td width="50px" height="300px" width="50px" height="300px"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="660px" height="50px" style="width:660px;height: 50px;"></td>
+    </tr>
+</table>
+<!--后半部分1-->
+<!--积分-->
+<table width="660px" height="150px" border="0" align="center" cellpadding="0" cellspacing="0" background="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/back3_04.png" style="width: 660px;height: 150px;background-repeat: no-repeat;background-position: top;background-size:660px 100%;">
+    <tr>
+        <td align="center" width="600px" height="110px" style="width: 600px;height: 110px;padding: 0;">
+            <table align="center" border="0" width="600px" height="110px" style="width: 600px;height: 110px;border-collapse: collapse;">
+                <tr>
+                    <td width="16%" align="center" valign="top" noWrap="noWrap" style="height: 22px;">
+                        <span style="font-size: 11px;">本期账单积分余额<br></span>
+                    <td width="0.5%" align="center" valign="top" >
+                        =</td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap" style="height: 22px;">
+                        <span style="font-size: 11px;">上期积分余额<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                        +</td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 22px;">
+                        <span style="font-size: 11px;">本期新增积分<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                        +</td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 22px;">
+                        <span style="font-size: 11px;">本期奖励积分<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                        +</td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 22px;">
+                        <span style="font-size: 11px;">本期调整积分<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                        -</td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 22px;">
+                        <span style="font-size: 11px;">本期兑换积分<br></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="16%" align="center" valign="top" noWrap="noWrap" style="height: 40px;">
+                        <span style="font-size: 11px;">Total Points<br>Available<br></span>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap" style="height: 40px;">
+                        <span style="font-size: 11px;">Points Opening <br>Balance<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 40px;">
+                        <span style="font-size: 11px;">Points Earned <br>this month<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 40px;">
+                        <span style="font-size: 11px;">Points Rawarded <br>this month<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 40px;">
+                        <span style="font-size: 11px;">Points Adjustde <br>this month<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height: 40px;">
+                        <span style="font-size: 11px;">Points redeemed <br>this month<br></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="16%" align="center" valign="top" noWrap="noWrap" style="height:15px">
+                        <span style="font-size: 11px;"><br>${bqzdjfye}<br></span>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height:15px">
+                        <span style="font-size: 11px;"><br>${sqjfye}<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height:15px">
+                        <span style="font-size: 11px;"><br>${bqxzjf}<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height:15px">
+                        <span style="font-size: 11px;"><br>${bqjljf}<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height:15px">
+                        <span style="font-size: 11px;"><br>${bqtzjf}<br></span>
+                    </td>
+                    <td width="0.5%" align="center" valign="top" >
+                    </td>
+                    <td width="15%" align="center" valign="top" noWrap="noWrap"style="height:15px">
+                        <span style="font-size: 11px;"><br>${bqdhjf}<br></span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" width="600px" height="40px" style="width: 600px;height: 40px;padding: 0;">
+        </td>
+    </tr>
+</table>
+<!--积分-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="660px" height="30px" style="width: 660px;height: 30px;">
+    <tr>
+        <td>
+            <table border="0" align="center" width="600px" height="30px" style="width: 600px;height: 30px;border-collapse: collapse;">
+                <tr>
+                    <td align="left" width="600px" height="30px" style="padding: 0px;width: 600px;height: 30px;">
+                                <span width="500px" noWrap="word-break" style="font-size: 12px;width:500px;">
+                                    提示：交易积分将在第二年（不含积分产生当年）的11月30日到期清零，各营销活动赠送积分的有效期以具体活动规则为准。您可通过“掌上京彩”APP查询最近将到期积分并进行兑换，通过北京银行信用卡官网查看信用卡积分规则。
+                                </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!--广告图-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="660px" height="50px" style="width: 660px;height: 50px;">
+    <tr><td align="center">
+        <a href="https://xyk.bankofbeijing.com.cn/a/r1s">
+            <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/18.jpg" alt="广告" style="width:650px;height: 200px;">
+        </a>
+    </td></tr>
+</table>
+<!--广告图-->
+
+<!--底部-->
+<table align="center" cellpadding="0" cellspacing="0" width="660px" height="100px" style="width: 660px;height: 100px;">
+    <tbody>
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" width="660px" height="50px" style="width: 660px;height: 50px;">
+                <tr>
+                    <td width="30px" height="50px" style="width:30px;height:50px;"></td>
+                    <td width="270px" height="50px" style="width:270px;height:50px;">
+                        <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/06-01.png" alt="logo" style="width:260px;height: 45px;">
+                    </td>
+                    <td width="30px" height="50px" style="width:30px;height:50px;"></td>
+                    <td width="300px" height="50px" style="width:300px;height:50px;text-align:right;">
+                        <a href="https://www.bankofbeijing.com.cn/creditcard" style="color: rgb(39, 134, 228);text-decoration: underline;font-size: 14px;">信用卡官网 |</a>
+                        <a href="https://xyk.bankofbeijing.com.cn/a/LhE" style="color: rgb(39, 134, 228);text-decoration: underline;font-size: 14px;">积分商城</a>
+                    </td>
+                    <td width="30px" height="50px" style="width:30px;height:50px;"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table  border="0" cellpadding="0" cellspacing="0" width="660px" height="30px" style="width: 660px;height: 30px;">
+                <tr>
+                    <td align="center" style="width: 660px;height: 30px;">
+                        <img src="https://cdn-xyk-app.bankofbeijing.com.cn/cdn/YJZD/bottomAd.png" alt="联系电话" style="width: 650px;height: 30px;">
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" width="660px" height="20px" style="width: 660px;height: 20px;">
+                <tr>
+                    <td width="400px" height="20px" style="width:400px;height:20px"></td>
+                    <td width="230px" height="20px" style="width:230px;height:20px;text-align: right;">
+                        <span style="font-size: 16px;font-weight: 600;">本邮件请勿回复，谢谢</span>
+                    </td>
+                    <td width="30px" height="20px" style="width: 30px;height: 20px;"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!--底部-->
+</body>
+</html>
